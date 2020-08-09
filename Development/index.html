@@ -13,19 +13,19 @@
 
     <div class="container">
 
-        <form>
+        <form onSubmit="addItem(event)">
             <label for="Items">Enter Item:</label>
             <input id="Items" type="text" placeholder="Type Item">
-            <button type="submit" class="f"onClick="addItem()">Add Item</button>
+            <button type="submit" class="f">Add Item</button>
             <button type="submit" class="f" onClick="removeItem()">Remove All Items</button>
         </form>
 
         <ol class="itemsList">
-            <li class="item">Shopping<span class="cross"><button>&#10060</button></span></li>
-            <li class="item">Shopping<span class="cross"><button>&#10060</button></span></li>
+            <li class="item">Shopping<span class="icons"><button>&#10060;</button><button>&#x270E;</button></span></li>
+            <li class="item">Shopping<span class="icons"><button>&#10060;</button><button>&#x270E;</button></span></li>
         </ol>
 
     </div>
-    
+    <script src="script.js"></script>
 </body>
 </html>

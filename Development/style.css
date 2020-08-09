@@ -86,17 +86,18 @@ li:hover{
 }
 
 
-.cross{
-    margin-left: 190px;
+.icons{
+    margin-left: 140px;
     
 }
-.cross button{
+.icons button{
     border-radius: 100%;
-    padding: 3px;
+    padding: 6px;
     cursor: pointer;   
+    margin-left: 7px; 
 }
 
-.cross button:hover{
+.icons button:hover{
     filter: invert(100%);
 }
 
