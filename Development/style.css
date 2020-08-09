@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 30px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container-fluid{
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+
+}
+.container {
+    max-width: 500px;
+    text-align: center;
+    height: 600px;
+    padding: 30px 20px;
+    box-shadow: 1px 3px 3px 1px rgba(206, 193, 193, 1);
+    border-radius: 8px;;
+    margin: 40px auto;
+    background-color: rgba(206, 193, 193, 0.3);
+    
+}
+
+.container form label{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+input{
+    padding: 4px 12px;
+    width: 320px;
+    margin: 8px 20px;
+    font-size: 18px;
+    border-radius: 15px;
+    outline: none;
+    border: 2px solid rgb(146, 146, 146);
+
+}
+
+.f{
+    margin: 5px 20px;
+    padding: 8px 10px;
+    border-radius: 16px;
+    font-size: 16px; 
+    color: #fff;
+    background-color: rgb(170, 17, 170);
+    font-weight: bold;
+    outline: none;
+}
+
+.f:hover{
+    cursor: pointer;
+    background-color: #fff;
+    color: rgb(119, 4, 119);
+    font-weight: bolder;
+    transition: 1s;
+}
+
+.itemsList{
+    margin: 30px 20px 10px 20px;;
+    list-style: none;
+    
+
+}
+
+.itemsList li{
+    background-color: white;
+    border-radius: 100%;
+    padding: 7px;
+    margin: 20px 0px;
+    font-size: 16px;
+}
+
+li:hover{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.cross{
+    margin-left: 190px;
+    
+}
+.cross button{
+    border-radius: 100%;
+    padding: 3px;
+    cursor: pointer;   
+}
+
+.cross button:hover{
+    filter: invert(100%);
+}
+
