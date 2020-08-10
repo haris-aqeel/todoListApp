@@ -20,24 +20,23 @@ class todoListItems{
     }
 
     displayListItem() {
+        
+
         allItems.forEach((element)=> {
-            let x = document.querySelector('.itemsList');
-            let l1 = document.createElement('li');//Update needs too be done
-            x.appendChild(l1);
-            l1.classList.add('item');
-            let b1 = document.createElement("button");
-            let b2 = document.createElement("button");
-            b1.createTextNode('&#10060;');
-            b2.createTextNode('&#x270E;');
-            let sp1 = document.createElement("span");
-            let sp2 = document.createElement("span");
-            let y = document.createTextNode(element.item_name);
-            l1.appendChild(y);
-            l1.appendChild(sp1);
-            l1.appendChild(sp2);
-            
+
+        let selectedUnorderedList = document.querySelector('.listOfItems');
+        selectedUnorderedList.insertAdjacentHTML('afterbegin', "<li class='individualItem' id ="+element.item_id+">"+ element.item_name +"<span class='icons '><button class= 'cross' onclick='singleItemActions("+element.item_id+")'>&#10060;</button><button>&#x270E;</button></span></li>");
+           
         })
     }
+
+    removeAllElements(){
+        let selectedUnorderedList = document.querySelector('.listOfItems');
+        selectedUnorderedList.remove();
+    }
+
+   
+
 }
 
 
@@ -47,14 +46,29 @@ class todoListItems{
 function addItem(e) {
     e.preventDefault();
     count++;
-    let myObj = {
+    var myObj = {
         ID : 'itemNumber' + count,
         Name : document.getElementById('Items').value
     };
     
-    let todoListApp = new todoListItems(myObj.ID, myObj.Name);
+    window.todoListApp = new todoListItems(myObj.ID, myObj.Name);
     todoListApp.storeData();
-    todoListApp.creationListItems();
     todoListApp.displayListItem();
+}
 
+function singleItemActions(x){
+    //Cross
+    
+        let lengthOfAllItems = allItems.length;
+        for (let i = 0; i< lengthOfAllItems; i++){
+            new1Id = allItems[i].item_id;
+            new2Id=  x.id;
+             if(new1Id == new2Id){
+                 allItems.splice(i, 1);
+                 i --;
+                 break;
+             }
+        }
+        window.todoListApp.removeAllElements();   
+        window.todoListApp.displayListItem();
 }

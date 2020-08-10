@@ -65,14 +65,14 @@ input{
     transition: 1s;
 }
 
-.itemsList{
+.listOfItems{
     margin: 30px 20px 10px 20px;;
     list-style: none;
     
 
 }
 
-.itemsList li{
+.listOfItems li{
     background-color: white;
     border-radius: 100%;
     padding: 7px;
